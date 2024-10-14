@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+<script>
+  let root = document.getElementById("root")
+
+  let h1 = document.createElement("h1");
+  h1.innerHTML = "Likes"
+  h1.classList = "likes"
+
+  let count = 1;
+
+  let h2 = document.createElement("h2")
+  h2.innerHTML = count;
+  h2.classList = "like-count"
+
+  let button = document.createElement("button")
+  button.innerHTML = "Likes"
+  button.classList = "likes-button"
+
+  button.addEventListener("click", function(){
+    count++
+    h2.innerHTML = count
+  })
+
+  root.append(h1, h2, button)
+</script>
+</html>
